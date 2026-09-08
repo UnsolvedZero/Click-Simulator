@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://08uh8xtyjeny"]
+
+[ext_resource type="Texture2D" uid="uid://bufbojq82kgyt" path="res://Button 2/button2 frame (1).png" id="1_jnpi6"]
+[ext_resource type="Texture2D" uid="uid://dbb54al0ns13k" path="res://Button 2/button2 frame (2).png" id="2_k2l7r"]
+[ext_resource type="Texture2D" uid="uid://d1pdcjtn16lbj" path="res://Button 2/button2 frame (3).png" id="3_1a1k8"]
+[ext_resource type="Texture2D" uid="uid://beqbu02640lcu" path="res://Button 2/button2 frame (4).png" id="4_1o7gj"]
+[ext_resource type="Texture2D" uid="uid://pxm2v0bxtkrb" path="res://Button 2/button2 frame (5).png" id="5_kvesc"]
+[ext_resource type="Texture2D" uid="uid://ci3j0jkpjvdar" path="res://Button 2/button2 frame (6).png" id="6_oh278"]
+[ext_resource type="Texture2D" uid="uid://dfiog3lvvj3w8" path="res://Button 2/button2 frame (7).png" id="7_exq3w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7b7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jnpi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k2l7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1a1k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1o7gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kvesc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oh278")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_exq3w")
+}],
+"loop": 1,
+"name": &"Button2 Click",
+"speed": 15.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=684321172]
+sprite_frames = SubResource("SpriteFrames_g7b7a")
+animation = &"Button2 Click"
+autoplay = "Button2 Click"
+frame = 4
+frame_progress = 0.10885119

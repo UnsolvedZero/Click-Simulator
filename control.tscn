@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://bhypps6kd0f3i"]
+
+[ext_resource type="Script" uid="uid://d4f4f000ssidt" path="res://button.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://bufbojq82kgyt" path="res://Button 2/button2 frame (1).png" id="2_6a6wx"]
+[ext_resource type="Texture2D" uid="uid://dbb54al0ns13k" path="res://Button 2/button2 frame (2).png" id="3_sky72"]
+[ext_resource type="Texture2D" uid="uid://d1pdcjtn16lbj" path="res://Button 2/button2 frame (3).png" id="4_0ytqx"]
+[ext_resource type="Texture2D" uid="uid://beqbu02640lcu" path="res://Button 2/button2 frame (4).png" id="5_pxugv"]
+[ext_resource type="Texture2D" uid="uid://pxm2v0bxtkrb" path="res://Button 2/button2 frame (5).png" id="6_eh0v1"]
+[ext_resource type="Texture2D" uid="uid://ci3j0jkpjvdar" path="res://Button 2/button2 frame (6).png" id="7_am1vj"]
+[ext_resource type="Texture2D" uid="uid://dfiog3lvvj3w8" path="res://Button 2/button2 frame (7).png" id="8_g31lc"]
+[ext_resource type="Script" uid="uid://xrq4x617qlss" path="res://buy_button.gd" id="9_sky72"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knq72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6a6wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sky72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0ytqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxugv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eh0v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_am1vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g31lc")
+}],
+"loop": 0,
+"name": &"Button2 Click",
+"speed": 24.0
+}]
+
+[node name="Control" type="Control" unique_id=273607849]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1332357439]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 230.0
+offset_right = 668.0
+offset_bottom = 424.0
+text = "Click Me..."
+script = ExtResource("1_0fbet")
+
+[node name="Money" type="Label" parent="Button" unique_id=410290617]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -151.0
+offset_right = 155.0
+offset_bottom = -21.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLook" type="AnimatedSprite2D" parent="Button" unique_id=1719656199]
+position = Vector2(90.99997, 85.999985)
+scale = Vector2(1.6115739, 1.6163367)
+sprite_frames = SubResource("SpriteFrames_knq72")
+animation = &"Button2 Click"
+frame = 6
+frame_progress = 1.0
+
+[node name="Shop" type="ItemList" parent="." unique_id=2052804479]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 266.0
+offset_right = 1195.0
+offset_bottom = 654.0
+theme_override_font_sizes/font_size = 20
+item_count = 3
+item_0/text = "              SHOP"
+item_0/selectable = false
+item_1/text = "Upgrade Button = 50"
+item_2/text = "Button Retexture = 20"
+
+[node name="BuyButton" type="Button" parent="." unique_id=65785079]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 23.0
+offset_right = 1035.0
+offset_bottom = 239.0
+script = ExtResource("9_sky72")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="pressed" from="BuyButton" to="BuyButton" method="_on_pressed"]
